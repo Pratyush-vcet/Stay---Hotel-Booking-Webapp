@@ -5,6 +5,7 @@ const Featured = () => {
   const { data, loading, error } = useFetch(
     "/hotels/countByCity?cities=Mumbai,Delhi,Banglore"
   );
+  
 
   return (
     <div className="featured">
@@ -14,9 +15,10 @@ const Featured = () => {
         <>
           <div className="featuredItem">
             <img
-              src="https://cf.bstatic.com/xdata/images/city/max500/957801.webp?k=a969e39bcd40cdcc21786ba92826063e3cb09bf307bcfeac2aa392b838e9b7a5&o="
+              src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/31204963.jpg?k=90c11832231c37a814e9631123bd28820e8ad8cd983b78ad529ea139791653d1&o=&hp=1"
               alt=""
               className="featuredImg"
+              
             />
             <div className="featuredTitles">
               <h1>Mumbai</h1>
@@ -26,7 +28,7 @@ const Featured = () => {
 
           <div className="featuredItem">
             <img
-              src="https://cf.bstatic.com/xdata/images/city/max500/690334.webp?k=b99df435f06a15a1568ddd5f55d239507c0156985577681ab91274f917af6dbb&o="
+              src="https://www.tourmyindia.com/states/delhi/images/red-fort1-1.jpg"
               alt=""
               className="featuredImg"
             />
@@ -37,7 +39,7 @@ const Featured = () => {
           </div>
           <div className="featuredItem">
             <img
-              src="https://cf.bstatic.com/xdata/images/city/max500/689422.webp?k=2595c93e7e067b9ba95f90713f80ba6e5fa88a66e6e55600bd27a5128808fdf2&o="
+              src="https://media.hrs.com/media/image/aa/95/fe/Sheraton_Grand_Bangalore_Hotel_at_Brigade_Gateway-Bengaluru-Aussenansicht-27-541175.jpg"
               alt=""
               className="featuredImg"
             />
