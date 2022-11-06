@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import "./featured.css";
-
+import {useNavigate} from "react-router-dom"
 const Featured = () => {
   const { data, loading, error } = useFetch(
     "/hotels/countByCity?cities=Mumbai,Delhi,Banglore"
   );
-  
+  let navigation = useNavigate()
 
   return (
     <div className="featured">
@@ -14,7 +15,7 @@ const Featured = () => {
       ) : (
         <>
           <div className="featuredItem">
-            <img
+            <img 
               src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/31204963.jpg?k=90c11832231c37a814e9631123bd28820e8ad8cd983b78ad529ea139791653d1&o=&hp=1"
               alt=""
               className="featuredImg"

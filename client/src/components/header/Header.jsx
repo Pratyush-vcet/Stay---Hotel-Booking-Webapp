@@ -61,6 +61,7 @@ const Header = ({ type }) => {
           type === "list" ? "headerContainer listMode" : "headerContainer"
         }
       >
+        <div className="headerSearch2">
         <div className="headerList">
           <div className="headerListItem active">
             <FontAwesomeIcon icon={faBed} />
@@ -83,32 +84,27 @@ const Header = ({ type }) => {
             <span>Airport taxis</span>
           </div>
         </div>
+        </div>
         {type !== "list" && (
           <>
-            <h1 className="headerTitle">
-              A lifetime of discounts? It's Genius.
-            </h1>
-            <p className="headerDesc">
-              Get rewarded for your travels – unlock instant savings of 10% or
-              more with a free Lamabooking account
-            </p>
-            {!user && <Link to = "/login" ><button className="headerBtn">Sign in / Register</button></Link>}
+            
+            {/* {!user && <Link to = "/login" ><button className="headerBtn">Sign in / Register</button></Link>} */}
             <div className="headerSearch">
               <div className="headerSearchItem">
-                <FontAwesomeIcon icon={faBed} className="headerIcon" />
+                {/* <FontAwesomeIcon icon={faBed} className="headerIcon" /> */}
                 <input
                   type="text"
-                  placeholder="Where are you going?"
+                  placeholder="   Where are you going?"
                   className="headerSearchInput"
                   onChange={(e) => setDestination(e.target.value)}
                 />
               </div>
-              <div className="headerSearchItem">
+              <div className="headerSearchItem-date">
                 <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
                 <span
                   onClick={() => setOpenDate(!openDate)}
-                  className="headerSearchText"
-                >{`${format(dates[0].startDate, "dd/MM/yyyy")} to ${format(
+                  className="headerSearchText-date"
+                >{`${format(dates[0].startDate, "dd/MM/yyyy")}  \u00A0 \u00A0 | \u00A0 \u00A0 ${format(
                   dates[0].endDate,
                   "dd/MM/yyyy"
                 )}`}</span>
@@ -123,12 +119,12 @@ const Header = ({ type }) => {
                   />
                 )}
               </div>
-              <div className="headerSearchItem">
+              <div className="headerSearchItem-option">
                 <FontAwesomeIcon icon={faPerson} className="headerIcon" />
                 <span
                   onClick={() => setOpenOptions(!openOptions)}
                   className="headerSearchText"
-                >{`${options.adult} adult · ${options.children} children · ${options.room} room`}</span>
+                >{`\u00A0${options.adult} -Adult \u00A0 \u00A0 ${options.children} -Children \u00A0 \u00A0 ${options.room} -Room`}</span>
                 {openOptions && (
                   <div className="options">
                     <div className="optionItem">
@@ -197,9 +193,9 @@ const Header = ({ type }) => {
                   </div>
                 )}
               </div>
-              <div className="headerSearchItem">
-                <button className="headerBtn" onClick={handleSearch}>
-                  Search
+              <div className="headerSearchItem-src">
+                <button className="headerBtn-src" onClick={handleSearch}>
+                  SEARCH
                 </button>
               </div>
             </div>

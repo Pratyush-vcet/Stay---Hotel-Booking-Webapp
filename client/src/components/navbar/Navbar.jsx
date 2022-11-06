@@ -21,10 +21,18 @@ const Navbar = () => {
             <Link to = "/login"><button className="navButton">Login</button></Link>
           </div>
         )} */}
+        <div className="items">
+        <ul>
+          <li>Flights + Hotel  </li>
+          <li>Hotel + Homes  </li>
+          <li>Flights</li>
+          <li>Coupans and Deals</li>
+        </ul>
+        </div>
         {user ? <button className="navButton" onClick={handleLogout}>Logout</button> : (
           <div className="navItems">
             <button className="navButton">Register</button>
-            <Link to = "/login"><button className="navButton">Login</button></Link>
+            <Link to = "/login"><button className="navButton-login">Login</button></Link>
           </div>
         )}
       
